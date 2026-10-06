@@ -828,4 +828,14 @@ body { background: var(--bg); color: var(--ink); }
 .card__media img, .gallery__main img, .cat-tile img, .banner__media img,
 .institucional__media img, .cart-item__media img { filter: none; }
 
+/* ------------- Mobile: enquadrar a modelo no banner inicial (sem cortar) */
+@media (max-width: 560px) {
+  .hero__banner img { object-position: 22% center; }
+  .hero__banner::after {
+    background:
+      radial-gradient(74% 74% at 50% 48%, rgba(8,8,10,.74), rgba(8,8,10,.20) 82%),
+      linear-gradient(180deg, rgba(8,8,10,.30) 0%, rgba(8,8,10,.62) 100%);
+  }
+}
+
 

@@ -26,7 +26,7 @@ const SITE = {
   tagline: 'Moda evangélica, social e casual — feminino e masculino',
   // WhatsApp em formato internacional (usado nos links wa.me)
   whatsapp: '5538999366026',
-  whatsappDisplay: '(38) 99933-6026',
+  whatsappDisplay: '(38) 99936-6026',
   instagram: 'negamodas__',
   instagramUrl: 'https://instagram.com/negamodas__',
   region: 'Monte Azul – MG e região',

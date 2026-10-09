@@ -838,4 +838,59 @@ body { background: var(--bg); color: var(--ink); }
   }
 }
 
+/* =============================================================================
+   SEÇÕES CLARAS — contraste entre blocos (algumas brancas, outras escuras)
+   A classe .section--light inverte as cores localmente (via variáveis), então
+   cards, textos, preços, botões e filtros internos se adaptam sozinhos.
+   O chrome do site (header, topbar, hero, footer) segue escuro.
+   ============================================================================= */
+.section--light {
+  --bg: #ffffff;
+  --bg-2: #f6f3ee;
+  --bg-3: #ffffff;
+  --bg-elev: #f1ece3;
+  --white: #ffffff;
+  --cream: #f6f3ee;
+  --cream-2: #ece6dc;
+  --ink: #1a1512;
+  --charcoal: #4a443b;
+  --muted: #857c70;
+  --line: rgba(26,21,18,.10);
+  --line-strong: rgba(26,21,18,.22);
+  --gold: #a8853c;
+  --gold-soft: #f2e9d6;
+  --rose: #c2877c;
+  --rose-soft: #f9f0ec;
+  --red: #b0112b;
+  --red-dark: #8a0d22;
+  background: var(--bg);
+  color: var(--ink);
+}
+.section--light .section-head p { color: var(--muted); }
+.section--light .kicker { color: var(--gold); }
+.section--light .kicker::before, .section--light .kicker::after { background: var(--gold); }
+.section--light .link-underline { color: var(--ink); border-bottom-color: var(--ink); }
+.section--light .link-underline:hover { color: var(--gold); border-color: var(--gold); }
+
+/* Cards brancos precisam de leve sombra para separar do fundo branco */
+.section--light .card { box-shadow: 0 10px 30px rgba(26,21,18,.07); }
+.section--light .card:hover { box-shadow: 0 16px 42px rgba(26,21,18,.13); border-color: rgba(168,133,60,.5); }
+.section--light .card__swatches i { border-color: rgba(26,21,18,.18); }
+
+/* Botões (adaptar variantes ao fundo claro) */
+.section--light .btn--dark { --btn-bg: #1a1512; --btn-fg: #fff; --btn-bd: #1a1512; }
+.section--light .btn--dark:hover { --btn-bg: #000; --btn-bd: #000; }
+.section--light .btn--ghost { --btn-fg: var(--ink); --btn-bd: rgba(26,21,18,.28); }
+.section--light .btn--ghost:hover { --btn-bg: rgba(26,21,18,.06); --btn-fg: var(--ink); --btn-bd: var(--ink); }
+
+/* Carrossel e placeholders no modo claro */
+.section--light .carousel__arrow { background: #fff; color: var(--ink); border-color: var(--line-strong); }
+.section--light .carousel__arrow:hover { background: var(--gold); color: #17130a; border-color: var(--gold); }
+.section--light .placeholder-media { background: linear-gradient(135deg,#e9e5de,#dcd5c9); color: #8f8779; }
+.section--light .placeholder-media::after { color: #8f8779; }
+.section--light .cat-tile { background: var(--cream-2); }
+.section--light .cat-tile::after { background: linear-gradient(180deg, rgba(8,8,10,.05) 40%, rgba(8,8,10,.78) 100%); }
+.section--light .instagram { background: #fff; border: 1px solid var(--line); box-shadow: 0 10px 30px rgba(26,21,18,.07); }
+.section--light .value-chip { background: #fff !important; border: 1px solid var(--line); color: var(--charcoal); }
+
 
